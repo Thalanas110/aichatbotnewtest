@@ -2,23 +2,28 @@
   "name": "ai-chatbot",
   "version": "1.0.0",
   "description": "A fully-fledged AI chatbot using Google Gemini",
-  "main": "chatbot.ts",
+  "main": "server.js",
   "scripts": {
-    "start": "ts-node chatbot.ts",
+    "start": "node server.js",
+    "cli": "ts-node chatbot.ts",
     "build": "tsc",
-    "dev": "ts-node chatbot.ts"
+    "dev": "node server.js"
   },
   "keywords": [
     "chatbot",
     "ai",
     "gemini",
-    "typescript"
+    "typescript",
+    "web-ui"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
-    "dotenv": "^16.6.1"
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "node-appwrite": "^20.2.1",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

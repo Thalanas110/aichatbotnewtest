@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="bot-avatar">🤖</div>
+                <div class="header-text">
+                    <h1>AI Chatbot</h1>
+                    <p class="status" id="status">Ready to chat</p>
+                </div>
+                <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Side Menu -->
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-overlay" id="menuOverlay"></div>
+            <div class="menu-content">
+                <div class="menu-header">
+                    <h2>Options</h2>
+                    <button class="close-menu" id="closeMenu" aria-label="Close menu">×</button>
+                </div>
+                <div class="menu-items">
+                    <button class="menu-item" id="clearHistory">
+                        <span class="menu-icon">🗑️</span>
+                        Clear History
+                    </button>
+                    <button class="menu-item" id="viewHistory">
+                        <span class="menu-icon">📜</span>
+                        View History
+                    </button>
+                    <button class="menu-item" id="viewModels">
+                        <span class="menu-icon">🔍</span>
+                        Available Models
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="welcome-message">
+                <div class="welcome-icon">👋</div>
+                <h2>Welcome to AI Chatbot!</h2>
+                <p>Start a conversation by typing a message below.</p>
+                <div class="feature-list">
+                    <div class="feature-item">💬 Natural conversations</div>
+                    <div class="feature-item">🧠 Powered by Google Gemini</div>
+                    <div class="feature-item">📱 Mobile friendly</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <div class="input-container">
+                <textarea 
+                    id="userInput" 
+                    placeholder="Type your message..." 
+                    rows="1"
+                    maxlength="5000"
+                ></textarea>
+                <button id="sendBtn" class="send-btn" aria-label="Send message">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for History/Models -->
+    <div class="modal" id="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Title</h2>
+                <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
